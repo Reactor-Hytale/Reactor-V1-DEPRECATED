@@ -16,25 +16,7 @@ public final class ZlibSupplier {
 
 
 
-    public static ZLib createZlib() throws ZlibException {
-        if (supportIGZip == NOT_SUPPORTED) {
-            return new JavaZlib();
-        }
-
-        if (supportIGZip == SUPPORTED) {
-            return IsalZlib.create();
-        }
-
-        if (supportIGZip == UNCHECKED) {
-            try {
-                final ZLib igzip = IsalZlib.create();
-                supportIGZip = SUPPORTED;
-                return igzip;
-            } catch (final Exception e) {
-                supportIGZip = NOT_SUPPORTED;
-                throw new ZlibException("Can't create a instance of igzip", e);
-            }
-        }
+    public static ZLib createZlib() {
         return new JavaZlib();
     }
 }

@@ -73,7 +73,7 @@ public class PlayerJoinListener {
 
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
-                chunk.setBlock(x,0,z,Blocks.GRASS_BLOCK);
+                chunk.setBlock(x,0,z,Blocks.SLIME_BLOCK);
             }
         }
 

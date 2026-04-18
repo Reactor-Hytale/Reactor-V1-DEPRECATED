@@ -31,7 +31,7 @@ public class VanillaChunk implements Chunk {
         final int maxY = (sections.length * 16 - (amountNegativeSections * 16)) - 1;
 
         final VanillaHeightMap heightMap = VanillaHeightMap.of(sections, worldType.minY(), maxY, worldType.height());
-        final LightEngine lightEngine = StaticLightEngine.ofBrightness(); // TODO: Change to vanilla light engine
+        final LightEngine lightEngine = StaticLightEngine.ofBrightness(); // TODO: Change to vanilla light engine - 2026: no bro
 
         return new VanillaChunk(worldType, amountNegativeSections, x, z, sections, heightMap, lightEngine);
     }
